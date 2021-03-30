@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 1, b = 1, c, d;
+        c = ++a; alert(c);           // 2 - Сначала инкрементируем переменную а, после записываем в переменную с
+        d = b++; alert(d);           // 1 - Сначала присваиваем d = b, потом инкрементируем переменную d
+        c = (2 + ++a); alert(c);      // 5 - Сначала ещё ращ инкрементируем переменную а, после происходят вычисления (2 + 3)
+        d = (2 + b++); alert(d);      // 4 - Сначала происходят вычисления, после инкрементируем переменную d (2 + 2)
+        alert(a);                    // 3 Переменная была дважды инкрементирована, (1 + 1 + 1)
+        alert(b);                    // 3 Аналогично
+    </script>
+
+    <script>
+        var a = 2;
+        var x = 1 + (a *= 2); // 1 + (2 * 2) = 5
+    </script>
+
+    <script>
+        var a = 2; b = 3;
+        if ((a >= 0) && (b >= 0)) {
+            alert(a + b);
+        }
+        else if ((a < 0) && (b < 0)) {
+            alert(a - b);
+        }
+        else {
+            alert(a * b);
+        }
+    </script>
+
+    <script>
+        var a = 5;
+        switch (a) {
+            case 1:
+                console.log("1");
+            case 2:
+                console.log("2");
+            case 3:
+                console.log("3");
+            case 4:
+                console.log("4");
+            case 5:
+                console.log("5");
+            case 6:
+                console.log("6");
+            case 7:
+                console.log("7");
+            case 8:
+                console.log("8");
+            case 9:
+                console.log("9");
+            case 10:
+                console.log("10");
+            case 11:
+                console.log("11");
+            case 12:
+                console.log("12");
+            case 13:
+                console.log("13");
+            case 14:
+                console.log("14");
+            case 15:
+                console.log("15");
+        }
+    </script>
+
+    <script>
+        function sum(a, b) {
+            return a + b;
+        }
+
+        function mult(a, b) {
+            return a * b;
+        }
+
+        function sub(a, b) {
+            return a - b;
+        }
+
+        function div(a, b) {
+            if (b != 0) {
+                return a / b;
+            }
+            else {
+                console.log("Деление на ноль!!!")
+                return 0;
+            }
+        }
+    </script>
+
+    <script>
+        function mathOpertion(x, y, s) {
+            switch (s) {
+                case "+": {
+                    alert(sum(x, y));
+                    break;
+                }
+
+                case "*": {
+                    alert(mult(x, y));
+                    break;
+                }
+
+                case "-": {
+                    alert(sub(x, y));
+                    break;
+                }
+                case "/": {
+                    alert(div(x, y));
+                    break;
+                }
+            }
+        }
+    </script>
+
+    <script>
+        alert(null > 0);  //  false
+        alert(null >= 0); // true
+        alert(null < 0); // false
+        alert(null <= 0); // false
+        alert(null == 0); // false
+        // Операторы сравнения преобразуют null в 0, поэтому результат 0 > 0 - false, а 0 >= 0 - true. Однако в JS null ошибочно является объектом
+    </script>
+
+    <script>
+        function power(val, pow) {
+            if (pow == 1) {
+                return val;
+            }
+            return val * power(val, pow - 1);
+        }
+        var a = power(2, 3);
+        console.log(a);
+    </script>
+</body>
+
+</html>
