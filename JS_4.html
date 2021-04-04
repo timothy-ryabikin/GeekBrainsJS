@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function dec() {
+            var objectNumber = {};
+            while (true) {
+                var number = prompt("введите число от 0 до 999:");
+                if (number < 0) {
+                    alert("введите число в диапазоне [0;999]");
+                }
+                else if (number > 999) {
+                    console.log("число больше 999");
+                    objectNumber = null;
+                    return objectNumber;
+                    break;
+                }
+                else {
+                    break;
+                }
+            }
+            var numberLength = number.length;
+            if (numberLength == 3) {
+                objectNumber.units = number[2];
+                objectNumber.dozens = number[1];
+                objectNumber.hundreds = number[0];
+                alert("сотни: " + objectNumber.hundreds + " десятки: " + objectNumber.dozens + " единицы: " + objectNumber.units);
+            }
+            else if (numberLength == 2) {
+                objectNumber.units = number[1];
+                objectNumber.dozens = number[0];
+                alert("десятки: " + objectNumber.dozens + " единицы: " + objectNumber.units);
+            }
+            else {
+                objectNumber.units = number[0];
+                alert("единицы: " + objectNumber.units);
+            }
+            return objectNumber;
+        }
+
+        var test = dec();
+        console.log(test);
+    </script>
+</body>
+
+</html>
