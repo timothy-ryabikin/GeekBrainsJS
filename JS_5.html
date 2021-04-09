@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JS_5</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    var letters = ["", "A", "B", "C", "D", "E", "F", "G", "H", ""];
+    var numbers = ["", 1, 2, 3, 4, 5, 6, 7, 8, ""];
+    var whiteF = ["", "&#9814", "&#9816", "&#9815", "&#9813", "&#9812", "&#9815", "&#9816", "&#9814", ""];
+    var blackF = ["", "&#9820", "&#9822", "&#9821", "&#9819", "&#9818", "&#9821", "&#9822", "&#9820", ""];
+    var board = document.createElement("table");
+    var tr, td;
+    for (var i = 0; i <= 9; i++) {
+        tr = document.createElement("tr");
+        board.append(tr);
+        for (var j = 0; j <= 9; j++) {
+            td = document.createElement("td");
+            if ((j == 0) || (j == 9)) {
+                td.innerText = numbers[i];
+                td.className = "number";
+                if ((j == 9))
+                    td.style.transform = "rotate(180deg)";
+            }
+            else if ((i == 0) || (i == 9)) {
+                td.innerText = letters[j];
+                td.className = "letter";
+                if ((i == 0))
+                    td.style.transform = "rotate(180deg)";
+            }
+            else {
+                if (((i % 2 == 0) && (j % 2 != 0)) || ((i % 2 != 0) && (j % 2 == 0))) {
+                    td.style.backgroundColor = "darksalmon";
+                }
+                else {
+                    td.style.backgroundColor = "white";
+                }
+                if (i == 1) {
+                    td.innerHTML = blackF[j];
+                }
+                if (i == 2) {
+                    td.innerHTML = "&#9817";
+                }
+                if (i == 7) {
+                    td.innerHTML = "&#9823";
+                }
+                if (i == 8) {
+                    td.innerHTML = whiteF[j];
+                }
+            }
+            tr.append(td);
+        }
+    }
+    board.className = "board";
+    document.querySelector("body").append(board);
+</script>
+
+</html>

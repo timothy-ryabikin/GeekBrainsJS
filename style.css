@@ -1,0 +1,12 @@
+.board {
+    font-weight: 800;
+    font-family:'Trebuchet MS';
+    text-align: center;
+    font-size: 18px;
+    height: 30em;
+    width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:burlywood;
+}
+
