@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="preview">
+        <div class="smallPhoto"><img src="images/jpeg1.jpeg" alt="photo1"></div>
+        <div class="smallPhoto"><img src="images/jpeg2.jpg" alt="photo2"></div>
+        <div class="smallPhoto"><img src="images/jpeg3.jpeg" alt="photo3"></div>
+    </div>
+    <div id="content">
+
+    </div>
+    <div id="btnBlock">
+        <div>
+            <button onclick="back()">Назад</button>
+        </div>
+        <div><button onclick="forw()">Вперёд</button></div>
+    </div>
+
+</body>
+
+<script>
+    var massOfImages = document.querySelectorAll("img");
+    var numberOfImage = 0;
+    var image = document.createElement("img"); image.src = "images/jpeg1.jpeg"; image.className = "contentImg";
+    var contentBlock = document.querySelector("#content");
+    contentBlock.append(image);
+    function forw() {
+        numberOfImage++;
+        if (numberOfImage > massOfImages.length - 1) {
+            numberOfImage = 0;
+        }
+        image.src = massOfImages[numberOfImage].src;
+    }
+
+    function back() {
+        numberOfImage--;
+        if (numberOfImage < 0) {
+            numberOfImage = 2;
+        }
+        image.src = massOfImages[numberOfImage].src;
+
+    }
+</script>
+
+</html>
