@@ -16,6 +16,25 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+}
+
+.cart-info {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 20%;
+  background-color: lightcyan;
+  position: absolute;
+  outline: 1px solid green;
+  right: 20%;
+  top: 62px;
+  padding: 10px;
+  z-index: 10;
+}
+
+.logo-title {
+  text-decoration: none;
+  color: #000;
 }
 
 .btn-cart, .card-btn {
@@ -42,5 +61,9 @@
 
 .card-image {
   outline: 1px solid grey;
+}
+
+.show {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

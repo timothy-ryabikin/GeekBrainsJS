@@ -15,9 +15,15 @@
     <header class="header">
         <div class="header-container container">
             <div>
-                <div class="logo-title">SHOP</div>
+                <a href="#" class="logo-title">
+                    <div>SHOP</div>
+                </a>
             </div>
-            <div><button class="btn-cart">Корзина</button></div>
+            <div><a href="#"><button class="btn-cart" id="btn-cart" onclick="showCart()">Корзина</button></a></div>
+            <div class="cart-info show">
+                <p class="amount"></p>
+                <p class="count"></p>
+            </div>
         </div>
     </header>
 
