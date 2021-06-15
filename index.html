@@ -21,6 +21,27 @@
                 </form>
                 <button class="btn-cart" type="button" @click="show =! show">Корзина</button>
                 <div class="cart-block" v-show="show">
+                    <div class="cart-item" v-for="item of cart" :key="item.id_product">
+                        <p v-if="!cart.length">Корзина пустая</p>
+                        <div class="product-bio">
+                            <img :src="imgCart" alt="img">
+                            <div class="product-desc">
+                                <div>
+                                    {{item.product_name}}
+                                </div>
+                                <div>
+                                    Колчиество: {{item.quantity}}
+                                </div>
+                                <div>
+                                    Цена: {{item.price}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-block">
+                            <div class="product-price"> Сумма:{{item.price * item.quantity}}</div>
+                            <button class="del-btn" @click="remove(item)">удалить</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>

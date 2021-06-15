@@ -115,12 +115,14 @@ img {
 .cart-item {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 .cart-item:not(:last-child){
     margin-bottom: 20px;
 }
 .product-bio{
     display: flex;
+    flex-direction: column;
 }
 .cart-item img{
     align-self: flex-start;
