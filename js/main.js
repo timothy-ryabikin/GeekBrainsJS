@@ -1,4 +1,3 @@
-//Отправляйте свои данные с помощью $emit в верхний компонент, а вниз с помощью props
 const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
 const app = new Vue({
@@ -55,8 +54,6 @@ const app = new Vue({
         filterCatalog(text) {
             let regexp = new RegExp(text, 'i');
             this.filtered = this.products.filter(el => regexp.test(el.product_name));
-            console.log(321);
-            console.log(this.filtered);
         }
     },
     mounted() {
