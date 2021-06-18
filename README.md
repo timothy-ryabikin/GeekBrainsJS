@@ -1,2 +1,1 @@
-# GeekBrainsJS
-Repository from homeworks
+https://timothy-ryabikin.github.io/GeekBrainsHTML-CSS/
