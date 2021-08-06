@@ -1,2 +1,2 @@
 # GeekBrainsJS
-Repository from homeworks
+Portfolio
